@@ -96,12 +96,48 @@ const nextButton = document.getElementById('next-btn');
 let currentQuestionIndex = 0;
 let score = 0;
 
+let minutes = 3;
+let seconds = 0;
+const minutesElement = document.getElementById("minutes");
+const secondsElement = document.getElementById("seconds");
+
+function startTimer() {
+  const timerInterval = setInterval(() => {
+    if (minutes === 0 && seconds === 0) {
+      clearInterval(timerInterval);
+      // Add your code to handle the end of the quiz here
+    } else {
+      if (seconds === 0) {
+        minutes--;
+        seconds = 59;
+      } else {
+        seconds--;
+      }
+      minutesElement.textContent = minutes.toString().padStart(2, "0");
+      secondsElement.textContent = seconds.toString().padStart(2, "0");
+    }
+  }, 1000);
+}
+
+startTimer();
+
+function resetTimer() {
+  minutes = 3;
+  seconds = 0;
+  minutesElement.textContent = minutes.toString().padStart(2, "0");
+  secondsElement.textContent = seconds.toString().padStart(2, "0");
+  startTimer();
+}
+
+
 function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
   nextButton.innerHTML = 'Next Question';
   showQuestion();
 }
+
+
 
 function showQuestion() {
   resetState();
@@ -148,10 +184,14 @@ function selectAnswer(e) {
 
 function showScore() {
   resetState();
-  questionElement.innerHTML = 'You scored ' + score + ' out of ' + questions.length;
+  questionElement.innerHTML = 'You scored ' + score + ' out of ' + questions.length + '!';
   nextButton.innerHTML = 'Play Again!';
   nextButton.style.display = 'block';
 }
+
+
+
+
 
 function handleNextButton() {
   currentQuestionIndex++;
