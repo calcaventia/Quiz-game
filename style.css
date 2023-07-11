@@ -1,0 +1,78 @@
+body {
+  background-color: #100547;
+}
+
+.container {
+  display: block;
+  margin: 50px auto;
+  padding: 2%;
+  max-width: 70%;
+  height: 700px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 8px 8px 20px #eb9dff;
+  border-radius: 40px;
+}
+
+/* Images */
+.melsoft-logo {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  padding: 5%;
+}
+
+.play-button {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: #9a1c9e;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+  animation: glowing 2s infinite;
+  border: none;
+}
+
+.play-button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%) rotate(180deg);
+  width: 0;
+  height: 0;
+  border-top: 24px solid transparent; /* Increase the size of the top and bottom borders */
+  border-bottom: 24px solid transparent; /* Increase the size of the top and bottom borders */
+  border-right: 42px solid #100547; /* Increase the size of the right border and set the background color and opacity */
+}
+
+@keyframes glowing {
+  0% {
+    background-color: #9a1c9e;
+    box-shadow: 0 0 5px #9a1c9e;
+  }
+  50% {
+    background-color: #fcfefe;
+    box-shadow: 0 0 20px #fcfefe;
+  }
+  100% {
+    background-color: #9a1c9e;
+    box-shadow: 0 0 5px #9a1c9e;
+  }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+  .container {
+    max-width: 90%;
+    max-height: 100%;
+    padding: 0 15px; /* Adjust the padding as per your needs */
+  }
+
+  .melsoft-logo {
+    width: 60%;
+  }
+}
