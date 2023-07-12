@@ -35,23 +35,21 @@ ul.navbar-nav {
 
 h1 {
   text-align: center;
-  padding: 2% 0 0 0;
 }
 
-h2 {
+h5 {
   text-align: center;
+  padding: 1% 0 3% 0;
 }
 
-#welcomePage-content1 {
-  text-align: center;
+#instructions-content1,
+#instructions-content2 {
   font-size: 18px;
-  padding: 5% 12% 2% 12%;
-}
-
-#welcomePage-content2 {
-  text-align: center;
-  font-size: 18px;
-  padding: 0 12% 2% 12%;
+  padding: 2% 12% 2% 12%;
+  background-color: #667eea;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 3px 3px 7px #6d1f55;
 }
 
 .btn-primary {
