@@ -126,7 +126,7 @@ function resetTimer() {
   seconds = 0;
   minutesElement.textContent = minutes.toString().padStart(2, "0");
   secondsElement.textContent = seconds.toString().padStart(2, "0");
-  startTimer();
+  
 }
 
 
