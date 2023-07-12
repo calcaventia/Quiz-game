@@ -5,7 +5,8 @@
 }
 
 body{
-  background-color: palevioletred;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-attachment: fixed;
 }
 
 .questions {
@@ -13,8 +14,10 @@ body{
   width: 90%;
   max-width: 600px;
   margin: 100px auto 0;
-  border-radius: 10px;
   padding: 30px;
+  box-shadow: 0px 0px 20px #380f42;
+  border-radius: 30px;
+  border: 4px solid #100547;
 }
 
 .quiz {
@@ -22,10 +25,9 @@ body{
 }
 
 .btn {
-  background: #fff;
-  color: #222;
+  background-color: #667eea;
+  color: #f4f0f0;
   width: 100%;
-  border: #222 1px solid;
   border-radius: 3px;
   padding: 10px;
   margin: 10px 0;
@@ -33,6 +35,7 @@ body{
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s;
+  
 }
 
 .btn:hover:not([disabled]){
@@ -46,7 +49,7 @@ body{
 
 
 #next-btn {
-  background: palevioletred;
+ background-color:#a1196c ;
   color: #fff;
   width: 150px;
   border: 0;
@@ -63,4 +66,50 @@ body{
 
 .incorrect{
   background: red;
+}
+.navbar-transparent {
+  background-color: transparent !important;
+}
+
+ul.navbar-nav {
+  margin-right: auto;
+  position: fixed;
+  top: 0;
+}
+
+#startQuiz-nav {
+  color: #a1196c;
+  font-weight: 600;
+}
+
+#startQuiz-nav:hover {
+  color: #100547;
+  font-weight: 600;
+}
+
+h1 {
+  text-align: center;
+}
+
+h5 {
+  text-align: center;
+  padding: 1% 0 3% 0;
+}
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+  .container {
+    max-width: 90%;
+    max-height: 100%;
+    padding: 0 20px 30px 20px;
+  }
+
+  #melsoft-logo {
+    width: 60%;
+  }
+}
+#melsoft-logonav {
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  padding: 5%;
 }
