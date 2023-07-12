@@ -28,6 +28,7 @@ body {
   overflow: hidden;
   animation: glowing 1.5s infinite;
   border: none;
+  color: transparent;
 }
 
 .play-button:before {
@@ -41,6 +42,7 @@ body {
   border-top: 24px solid transparent; /* Increase the size of the top and bottom borders */
   border-bottom: 24px solid transparent; /* Increase the size of the top and bottom borders */
   border-right: 42px solid #100547; /* Increase the size of the right border and set the background color and opacity */
+  opacity: 50%;
 }
 
 @keyframes glowing {
@@ -56,6 +58,16 @@ body {
     background-color: #a1196c;
     box-shadow: 0 0 5px #a1196c;
   }
+}
+
+.play-button:hover {
+  background-color: #9a1c9e;
+  color: #fff;
+  animation: none;
+}
+
+.play-button:hover::before {
+  display: none;
 }
 
 /* Images */
