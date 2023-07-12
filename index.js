@@ -143,8 +143,9 @@ function handleTimeUp() {
   // Adding new event listener to reset the timer
   nextButton.addEventListener('click', handlePlayAgain);
 }
-
 function handlePlayAgain() {
+  minutes = 1;
+  seconds = 0;
   startTimer(); // Reset the timer
 }
 
