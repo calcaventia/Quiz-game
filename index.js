@@ -190,9 +190,6 @@ function showScore() {
 }
 
 
-
-
-
 function handleNextButton() {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
@@ -207,6 +204,7 @@ nextButton.addEventListener('click', () => {
     handleNextButton();
   } else {
     startQuiz();
+    resetTimer();
   }
 })
 
