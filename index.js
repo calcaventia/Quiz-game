@@ -105,7 +105,6 @@ function startTimer() {
   const timerInterval = setInterval(() => {
     if (minutes === 0 && seconds === 0) {
       clearInterval(timerInterval);
-      // Add your code to handle the end of the quiz here
       handleTimeUp();
     } else {
       if (seconds === 0) {
