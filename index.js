@@ -96,7 +96,7 @@ const nextButton = document.getElementById('next-btn');
 let currentQuestionIndex = 0;
 let score = 0;
 
-let minutes = 3;
+let minutes = 1;
 let seconds = 0;
 const minutesElement = document.getElementById("minutes");
 const secondsElement = document.getElementById("seconds");
@@ -106,6 +106,7 @@ function startTimer() {
     if (minutes === 0 && seconds === 0) {
       clearInterval(timerInterval);
       // Add your code to handle the end of the quiz here
+      handleTimeUp();
     } else {
       if (seconds === 0) {
         minutes--;
@@ -121,13 +122,30 @@ function startTimer() {
 
 startTimer();
 
+
+
 function resetTimer() {
-  minutes = 3;
+  minutes = 1;
   seconds = 0;
   minutesElement.textContent = minutes.toString().padStart(2, "0");
   secondsElement.textContent = seconds.toString().padStart(2, "0");
-  
 }
+
+function handleTimeUp() {
+  questionElement.innerHTML = 'Sorry, you ran out of time!';
+  resetState();
+  nextButton.innerHTML = 'Play Again!';
+  nextButton.style.display = 'block';
+
+  // Removing old event listener if it exists
+  nextButton.removeEventListener('click', handleNextButton);
+
+  // Adding new event listener to reset the timer
+  nextButton.addEventListener('click', resetTimer);
+}
+
+
+
 
 
 function startQuiz() {
@@ -136,6 +154,7 @@ function startQuiz() {
   nextButton.innerHTML = 'Next Question';
   showQuestion();
 }
+
 
 
 
@@ -185,9 +204,21 @@ function selectAnswer(e) {
 function showScore() {
   resetState();
   questionElement.innerHTML = 'You scored ' + score + ' out of ' + questions.length + '!';
+  var messageElement = document.createElement('p');
+
+  if (score <= 5) {
+    messageElement.textContent = 'Sorry, you did not pass. Please try again.';
+  } else {
+    messageElement.textContent = 'Well done, you have passed!';
+  }
+
   nextButton.innerHTML = 'Play Again!';
   nextButton.style.display = 'block';
+
+  // Append the message element to the DOM
+  questionElement.appendChild(messageElement);
 }
+
 
 
 function handleNextButton() {
