@@ -132,7 +132,7 @@ const nextButton = document.getElementById("next-btn");
 let currentQuestionIndex = 0;
 let score = 0;
 
-let minutes = 1;
+let minutes = 3;
 let seconds = 0;
 const minutesElement = document.getElementById("minutes");
 const secondsElement = document.getElementById("seconds");
@@ -158,28 +158,31 @@ function startTimer() {
 startTimer();
 
 function resetTimer() {
-  minutes = 1;
+  minutes = 3;
   seconds = 0;
   minutesElement.textContent = minutes.toString().padStart(2, "0");
   secondsElement.textContent = seconds.toString().padStart(2, "0");
 }
 
+
 function handleTimeUp() {
   questionElement.innerHTML = "Sorry, you ran out of time!";
   resetState();
-  nextButton.innerHTML = "Play Again!";
+  nextButton.innerHTML = `
+  <div class="button-container">
+    <button id="finished-btn" onclick="redirectToHomePage()">Home Page</button>
+    <button id="finished-btn" onclick="redirectToQuestionsPage()">Start Quiz</button>
+  </div>
+  `;
   nextButton.style.display = "block";
-
-  // Removing old event listener if it exists
-  nextButton.removeEventListener("click", handleNextButton);
-
-  // Adding new event listener to reset the timer
-  nextButton.addEventListener("click", handlePlayAgain);
 }
-function handlePlayAgain() {
-  minutes = 1;
-  seconds = 0;
-  startTimer(); // Reset the timer
+
+function redirectToHomePage() {
+  window.location.href = "index.html";
+}
+
+function redirectToQuestionsPage() {
+  window.location.href = "questions.html";
 }
 
 function startQuiz() {
