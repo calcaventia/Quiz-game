@@ -15,9 +15,19 @@ body {
   border: 3px solid #100547;
 }
 
+h2 {
+  color: #100547;
+  text-align: center;
+  text-shadow: 1px 1px 4px #c8c8c8;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+}
+
 .play-button {
   position: absolute;
-  top: 70%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100px;
@@ -63,7 +73,10 @@ body {
 .play-button:hover {
   background-color: #9a1c9e;
   color: #fff;
+  font-weight: 700;
+  font-size: 22px;
   animation: none;
+  text-shadow: 0 0 10px #fcfefe;
 }
 
 .play-button:hover::before {
