@@ -25,6 +25,11 @@ body {
   background-color: #667eea;
 }
 
+.icon-container {
+  text-align: center;
+  padding: 35% 0 0 0;
+}
+
 #home-btn {
   display: inline-block;
   background-color: #a1196c;
@@ -52,7 +57,7 @@ body {
 }
 
 /*Images*/
-#melsoft-logonav {
+#contact-logo {
   display: block;
   margin: 0 auto;
   width: 160px;
