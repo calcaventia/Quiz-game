@@ -27,10 +27,19 @@
         class="melsoft-logo"
         id="melsoft-logo"
       />
-      <button type="submit" class="play-button">START</button>
+      <button type="submit" class="play-button" id="playButton">START</button>
+      <script>
+        const playButton = document.getElementById("playButton");
+playButton.addEventListener("click", function () {
+  window.location.href = "welcome.html";
+});
+
+
+      </script>
       <script
         src="https://kit.fontawesome.com/9bb006a46f.js"
         crossorigin="anonymous"
+       
       ></script>
       <script src="index.js"></script>
     </div>

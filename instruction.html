@@ -48,13 +48,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
                     >Home</a
                   >
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" id="startQuiz-nav" href="#">Start Quiz</a>
+                  <a class="nav-link" id="startQuiz-nav" href="questions.html"
+                    >Start Quiz</a
+                  >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Contact Us</a>
@@ -74,11 +79,13 @@
               1. The quiz timer will start counting down from 30 minutes as soon
               as you click on the "Start Quiz" button.
               <br />
+              <br />
               2. Read the coding questions carefully and provide your answers by
               selecting the appropriate option.
               <br />
+              <br />
               3. Answer all 10 questions within the given time. Keep an eye on
-              the timer as it counts down.
+              the timer as it counts down. <br />
             </p>
           </div>
           <div class="col-lg-6">
@@ -86,8 +93,10 @@
               4. Once you have answered all the questions or the timer runs out,
               your results will be automatically displayed.
               <br />
+              <br />
               5. If you scored 5 or fewer correct answers, you will have one
               more chance to retake the quiz.
+              <br />
               <br />
               6. If you scored 6 or more correct answers, Congratulations! You
               have passed the quiz. A Melsoft representative will contact you.
@@ -101,12 +110,21 @@
 
       <section>
         <div class="d-flex justify-content-center align-items-center gap-3">
-          <button type="button" class="btn btn-primary custom-color">
+          <button
+            type="button"
+            class="btn btn-primary custom-color"
+            id="startQuiz"
+          >
             Start Quiz
           </button>
         </div>
       </section>
-
+      <script>
+        const startQuiz = document.getElementById("startQuiz");
+        startQuiz.addEventListener("click", function () {
+          window.location.href = "questions.html";
+        });
+      </script>
       <script
         src="https://kit.fontawesome.com/9bb006a46f.js"
         crossorigin="anonymous"

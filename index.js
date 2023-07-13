@@ -5,8 +5,8 @@ const questions = [
       { text: "22", correct: true },
       { text: "4", correct: false },
       { text: "NaN", correct: false },
-      { text: "Error", correct: false }
-    ]
+      { text: "Error", correct: false },
+    ],
   },
   {
     question: "What is the scope of a variable defined with the 'let' keyword?",
@@ -14,8 +14,8 @@ const questions = [
       { text: "Global scope", correct: false },
       { text: "Function & Block scope", correct: true },
       { text: "ID scope", correct: false },
-      { text: "Class scope", correct: false }
-    ]
+      { text: "Class scope", correct: false },
+    ],
   },
   {
     question: "What is the purpose of the 'bind()' method in JavaScript?",
@@ -23,8 +23,8 @@ const questions = [
       { text: "To concatenate two or more strings", correct: false },
       { text: "To convert a function into a string", correct: false },
       { text: "To attach an event handler to an element", correct: false },
-      { text: "To bind a function to a specific context", correct: true }
-    ]
+      { text: "To bind a function to a specific context", correct: true },
+    ],
   },
   {
     question: "Javascript is an _______ language?",
@@ -32,33 +32,55 @@ const questions = [
       { text: "Object-Oriented", correct: true },
       { text: "Object-Based", correct: false },
       { text: "Procedural", correct: false },
-      { text: "None Of The Above", correct: false }
-    ]
+      { text: "None Of The Above", correct: false },
+    ],
   },
   {
     question: "What is the purpose of the 'reduce()' method in JavaScript?",
     answers: [
-      { text: "To iterate over an array and execute a function on each element", correct: false },
-      { text: "To filter out elements from an array based on a condition", correct: false },
-      { text: "To sort the elements of an array in ascending order", correct: false },
-      { text: "To reduce an array to a single value by applying an accumulator function", correct: true }
-    ]
+      {
+        text: "To iterate over an array and execute a function on each element",
+        correct: false,
+      },
+      {
+        text: "To filter out elements from an array based on a condition",
+        correct: false,
+      },
+      {
+        text: "To sort the elements of an array in ascending order",
+        correct: false,
+      },
+      {
+        text: "To reduce an array to a single value by applying an accumulator function",
+        correct: true,
+      },
+    ],
   },
   {
-    question: "What is the output of the following code?\n\nconsole.log(0.1 + 0.2 === 0.3);",
+    question:
+      "What is the output of the following code?\n\nconsole.log(0.1 + 0.2 === 0.3);",
     answers: [
       { text: "true", correct: false },
-      { text: "false", correct: true }
-    ]
+      { text: "false", correct: true },
+    ],
   },
   {
     question: "What is the purpose of the 'fetch()' function in JavaScript?",
     answers: [
       { text: "To validate the syntax of a JSON object", correct: false },
-      { text: "To convert a JSON string into a JavaScript object", correct: false },
-      { text: "To fetch data from a server using an HTTP request", correct: true },
-      { text: "To create a copy of an existing JavaScript object", correct: false }
-    ]
+      {
+        text: "To convert a JSON string into a JavaScript object",
+        correct: false,
+      },
+      {
+        text: "To fetch data from a server using an HTTP request",
+        correct: true,
+      },
+      {
+        text: "To create a copy of an existing JavaScript object",
+        correct: false,
+      },
+    ],
   },
   {
     question: "What is the result of the expression '5' - 3 in JavaScript?",
@@ -66,32 +88,46 @@ const questions = [
       { text: "8", correct: false },
       { text: "2", correct: true },
       { text: "NaN", correct: false },
-      { text: "Error", correct: false }
-    ]
+      { text: "Error", correct: false },
+    ],
   },
   {
-    question: "What is the purpose of the 'querySelectorAll()' method in JavaScript?",
+    question:
+      "What is the purpose of the 'querySelectorAll()' method in JavaScript?",
     answers: [
-      { text: "To select the first element that matches a CSS selector", correct: false },
-      { text: "To select all elements that match a CSS selector", correct: true },
-      { text: "To select elements based on a specified attribute value", correct: false },
-      { text: "To select elements based on their position in the DOM", correct: false }
-    ]
+      {
+        text: "To select the first element that matches a CSS selector",
+        correct: false,
+      },
+      {
+        text: "To select all elements that match a CSS selector",
+        correct: true,
+      },
+      {
+        text: "To select elements based on a specified attribute value",
+        correct: false,
+      },
+      {
+        text: "To select elements based on their position in the DOM",
+        correct: false,
+      },
+    ],
   },
   {
-    question: "What is the output of the following code?\n\nconsole.log(typeof NaN);",
+    question:
+      "What is the output of the following code?\n\nconsole.log(typeof NaN);",
     answers: [
       { text: "'number'", correct: true },
       { text: "'NaN'", correct: false },
       { text: "'undefined'", correct: false },
-      { text: "'null'", correct: false }
-    ]
-  }
+      { text: "'null'", correct: false },
+    ],
+  },
 ];
 
-const questionElement = document.getElementById('question');
-const answerButton = document.getElementById('answer-buttons');
-const nextButton = document.getElementById('next-btn');
+const questionElement = document.getElementById("question");
+const answerButton = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -121,8 +157,6 @@ function startTimer() {
 
 startTimer();
 
-
-
 function resetTimer() {
   minutes = 1;
   seconds = 0;
@@ -131,16 +165,16 @@ function resetTimer() {
 }
 
 function handleTimeUp() {
-  questionElement.innerHTML = 'Sorry, you ran out of time!';
+  questionElement.innerHTML = "Sorry, you ran out of time!";
   resetState();
-  nextButton.innerHTML = 'Play Again!';
-  nextButton.style.display = 'block';
+  nextButton.innerHTML = "Play Again!";
+  nextButton.style.display = "block";
 
   // Removing old event listener if it exists
-  nextButton.removeEventListener('click', handleNextButton);
+  nextButton.removeEventListener("click", handleNextButton);
 
   // Adding new event listener to reset the timer
-  nextButton.addEventListener('click', handlePlayAgain);
+  nextButton.addEventListener("click", handlePlayAgain);
 }
 function handlePlayAgain() {
   minutes = 1;
@@ -148,41 +182,33 @@ function handlePlayAgain() {
   startTimer(); // Reset the timer
 }
 
-
-
-
-
-
 function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
-  nextButton.innerHTML = 'Next Question';
+  nextButton.innerHTML = "Next Question";
   showQuestion();
 }
 
-
-
-
 function showQuestion() {
   resetState();
-  let  currentQuestion = questions[currentQuestionIndex];
+  let currentQuestion = questions[currentQuestionIndex];
   let questionNumber = currentQuestionIndex + 1;
-  questionElement.innerHTML = questionNumber + '. ' + currentQuestion.question;
+  questionElement.innerHTML = questionNumber + ". " + currentQuestion.question;
 
-  currentQuestion.answers.forEach(answer => {
-    const button = document.createElement('button');
-    button.innerHTML  = answer.text;
-    button.classList.add('btn');
+  currentQuestion.answers.forEach((answer) => {
+    const button = document.createElement("button");
+    button.innerHTML = answer.text;
+    button.classList.add("btn");
     answerButton.appendChild(button);
     if (answer.correct) {
       button.dataset.correct = answer.correct;
     }
-    button.addEventListener('click', selectAnswer);
-  })
+    button.addEventListener("click", selectAnswer);
+  });
 }
 
 function resetState() {
-  nextButton.style.display = 'none';
+  nextButton.style.display = "none";
   while (answerButton.firstChild) {
     answerButton.removeChild(answerButton.firstChild);
   }
@@ -194,37 +220,36 @@ function selectAnswer(e) {
   if (isCorrect) {
     selectedBtn.classList.add("correct");
     score++;
-  }else {
+  } else {
     selectedBtn.classList.add("incorrect");
   }
-  Array.from(answerButton.children).forEach(button => {
+  Array.from(answerButton.children).forEach((button) => {
     if (button.dataset.correct === "true") {
       button.classList.add("correct");
     }
     button.disabled = true;
   });
-  nextButton.style.display = 'block';
+  nextButton.style.display = "block";
 }
 
 function showScore() {
   resetState();
-  questionElement.innerHTML = 'You scored ' + score + ' out of ' + questions.length + '!';
-  var messageElement = document.createElement('p');
+  questionElement.innerHTML =
+    "You scored " + score + " out of " + questions.length + "!";
+  var messageElement = document.createElement("p");
 
   if (score <= 5) {
-    messageElement.textContent = 'Sorry, you did not pass. Please try again.';
+    messageElement.textContent = "Sorry, you did not pass. Please try again.";
   } else {
-    messageElement.textContent = 'Well done, you have passed!';
+    messageElement.textContent = "Well done, you have passed!";
   }
 
-  nextButton.innerHTML = 'Play Again!';
-  nextButton.style.display = 'block';
+  nextButton.innerHTML = "Play Again!";
+  nextButton.style.display = "block";
 
   // Append the message element to the DOM
   questionElement.appendChild(messageElement);
 }
-
-
 
 function handleNextButton() {
   currentQuestionIndex++;
@@ -235,13 +260,13 @@ function handleNextButton() {
   }
 }
 
-nextButton.addEventListener('click', () => {
+nextButton.addEventListener("click", () => {
   if (currentQuestionIndex < questions.length) {
     handleNextButton();
   } else {
     startQuiz();
     resetTimer();
   }
-})
+});
 
 startQuiz();

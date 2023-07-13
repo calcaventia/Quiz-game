@@ -48,13 +48,18 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
                     >Home</a
                   >
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" id="startQuiz-nav" href="#">Start Quiz</a>
+                  <a class="nav-link" id="startQuiz-nav" href="questions.html"
+                    >Start Quiz</a
+                  >
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Contact Us</a>
@@ -85,15 +90,33 @@
 
       <section>
         <div class="d-flex justify-content-center align-items-center gap-3">
-          <button type="button" class="btn btn-primary custom-color">
+          <button
+            type="submit"
+            class="btn btn-primary custom-color"
+            id="instButton"
+          >
             Quiz Instructions
           </button>
-          <button type="button" class="btn btn-primary custom-color">
+          <button
+            type="submit"
+            class="btn btn-primary custom-color"
+            id="startQuiz"
+          >
             Start Quiz
           </button>
         </div>
       </section>
+      <script>
+        const startQuiz = document.getElementById("startQuiz");
+        startQuiz.addEventListener("click", function () {
+          window.location.href = "questions.html";
+        });
 
+        const instButton = document.getElementById("instButton");
+        instButton.addEventListener("click", function () {
+          window.location.href = "instruction.html";
+        });
+      </script>
       <script
         src="https://kit.fontawesome.com/9bb006a46f.js"
         crossorigin="anonymous"
