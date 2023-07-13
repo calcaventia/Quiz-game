@@ -10,6 +10,7 @@ body {
   height: 100%;
   box-shadow: 0px 0px 20px #380f42;
   border-radius: 30px;
+  font-family: "Quicksand", sans-serif;
 }
 
 #contact-containerRight {
@@ -19,9 +20,13 @@ body {
 }
 
 #melsoft-details {
-  background-color: #667eea;
+  background-color: #8e66ea2f;
   border-radius: 10px 0 0 10px;
-  color: #fff;
+  color: #e1e1e1;
+}
+
+.socialM-icons:hover {
+  opacity: 60%;
 }
 
 h2 {
@@ -42,10 +47,12 @@ h2 {
   display: inline-block;
   background-color: #a1196c;
   border: none;
-  font-weight: 700;
+  font-weight: 900;
+  font-family: "Quicksand", sans-serif;
   border-radius: 30px;
-  padding: 30% 50% 30% 50%;
+  padding: 20% 50% 20% 50%;
   font-size: 20px;
+  box-shadow: 3px 3px 6px #380f42;
 }
 
 #home-btn:hover {
@@ -55,6 +62,7 @@ h2 {
 }
 
 #submit-btn {
+  font-weight: 700;
   background-color: #100547;
   border-radius: 30px;
   padding: 2% 10% 2% 10%;
