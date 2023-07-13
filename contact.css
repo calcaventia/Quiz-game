@@ -43,8 +43,13 @@ h2 {
   padding: 8% 8% 0 8%;
 }
 
+a {
+  text-decoration: none;
+}
+
 #home-btn {
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
   background-color: #a1196c;
   border: none;
   font-weight: 900;
@@ -54,7 +59,6 @@ h2 {
   font-size: 20px;
   box-shadow: 3px 3px 6px #380f42;
 }
-
 #home-btn:hover {
   background-color: #100547;
   border: none;
