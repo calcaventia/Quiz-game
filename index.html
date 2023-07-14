@@ -21,14 +21,22 @@
   <link rel="stylesheet" type="text/css" href="style.css" />
   <body>
     <div class="container">
-      <img
-        src="images/melsoft-logo1.png"
-        alt="institution logo"
-        class="melsoft-logo"
-        id="melsoft-logo"
-      />
-      <h2>The Ultimate Coding Ninja Quiz</h2>
-      <button type="submit" class="play-button" id="playButton">START</button>
+      <div class="content col-12">
+        <img
+          src="images/melsoft-logo1.png"
+          alt="institution logo"
+          class="melsoft-logo"
+          id="melsoft-logo"
+        />
+      </div>
+      <div class="content col-12">
+        <h2>The Ultimate Coding Ninja Quiz</h2>
+      </div>
+      <br />
+      <br />
+      <div class="content col-12">
+        <button type="submit" class="play-button" id="playButton">START</button>
+      </div>
       <script>
         const playButton = document.getElementById("playButton");
         playButton.addEventListener("click", function () {

@@ -25,11 +25,15 @@ h2 {
   font-size: 25px;
 }
 
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .play-button {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  margin: 0 auto;
   width: 100px;
   height: 100px;
   background-color: #9a1c9e;
@@ -39,6 +43,9 @@ h2 {
   animation: glowing 1.5s infinite;
   border: none;
   color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .play-button:before {
@@ -49,9 +56,9 @@ h2 {
   transform: translate(-50%, -50%) rotate(180deg);
   width: 0;
   height: 0;
-  border-top: 24px solid transparent; /* Increase the size of the top and bottom borders */
-  border-bottom: 24px solid transparent; /* Increase the size of the top and bottom borders */
-  border-right: 42px solid #100547; /* Increase the size of the right border and set the background color and opacity */
+  border-top: 24px solid transparent;
+  border-bottom: 24px solid transparent;
+  border-right: 42px solid #100547;
   opacity: 50%;
 }
 
@@ -101,5 +108,18 @@ h2 {
 
   #melsoft-logo {
     width: 60%;
+    margin: 60px auto;
+  }
+
+  h2 {
+    padding: 5% 0 0 0;
+  }
+
+  .play-button:before {
+    top: 52%;
+  }
+
+  .play-button {
+    top: 110%;
   }
 }

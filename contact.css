@@ -16,12 +16,12 @@ body {
 #contact-containerRight {
   background-color: rgb(220, 220, 220);
   padding: 7% 3% 7% 3%;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 20px 20px 0;
 }
 
 #melsoft-details {
   background-color: #8e66ea2f;
-  border-radius: 10px 0 0 10px;
+  border-radius: 0 10px 10px 0;
   color: #e1e1e1;
 }
 
@@ -72,10 +72,6 @@ a {
   padding: 2% 10% 2% 10%;
 }
 
-.d-flex {
-  height: 100%;
-}
-
 /*Images*/
 #contact-logo {
   display: block;
@@ -94,5 +90,17 @@ a {
 
   #melsoft-logo {
     width: 60%;
+  }
+
+  .icon-container {
+    padding: 20% 0 15% 0;
+  }
+
+  #contact-containerRight {
+    border-radius: 0 0 10px 10px;
+  }
+
+  #melsoft-details {
+    border-radius: 10px 10px 0 0;
   }
 }
