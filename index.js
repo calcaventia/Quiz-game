@@ -168,7 +168,7 @@ function handleTimeUp() {
   questionElement.innerHTML = "Sorry, you ran out of time!";
   resetState();
   nextButton.innerHTML = `
-      <button id="finished-btn" onclick="redirectToHomePage()">Home Page</button> |  
+      <button id="finished-btn" onclick="redirectToHomePage()">Home Page</button> |
     <button id="finished-btn" onclick="redirectToQuestionsPage()">Try Again</button>
     `;
   nextButton.style.display = "block";
@@ -240,7 +240,7 @@ function showScore() {
     "</span> out of " +
     questions.length +
     "!</div>";
-  var messageElement = document.createElement("p");
+  let messageElement = document.createElement("p");
 
   if (score <= 5) {
     messageElement.textContent = "Sorry, you did not pass. Please try again.";
