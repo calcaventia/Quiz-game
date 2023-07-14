@@ -60,8 +60,8 @@ const questions = [
     question:
       "What is the output of the following code?\n\nconsole.log(0.1 + 0.2 === 0.3);",
     answers: [
-      { text: "true", correct: false },
-      { text: "false", correct: true },
+      { text: "True", correct: false },
+      { text: "False", correct: true },
     ],
   },
   {
@@ -164,16 +164,13 @@ function resetTimer() {
   secondsElement.textContent = seconds.toString().padStart(2, "0");
 }
 
-
 function handleTimeUp() {
   questionElement.innerHTML = "Sorry, you ran out of time!";
   resetState();
   nextButton.innerHTML = `
-  <div class="button-container">
-    <button id="finished-btn" onclick="redirectToHomePage()">Home Page</button>
-    <button id="finished-btn" onclick="redirectToQuestionsPage()">Start Quiz</button>
-  </div>
-  `;
+      <button id="finished-btn" onclick="redirectToHomePage()">Home Page</button> |  
+    <button id="finished-btn" onclick="redirectToQuestionsPage()">Try Again</button>
+    `;
   nextButton.style.display = "block";
 }
 
@@ -238,16 +235,21 @@ function selectAnswer(e) {
 function showScore() {
   resetState();
   questionElement.innerHTML =
-    "You scored " + score + " out of " + questions.length + "!";
+    "<div style='text-align: center;'>You scored <span>" +
+    score +
+    "</span> out of " +
+    questions.length +
+    "!</div>";
   var messageElement = document.createElement("p");
 
   if (score <= 5) {
     messageElement.textContent = "Sorry, you did not pass. Please try again.";
   } else {
-    messageElement.textContent = "Well done, you have passed!";
+    messageElement.innerHTML =
+      "Well done, you have passed!&#127881<br/><br/> A Melsoft representative will contact you shortly.";
   }
 
-  nextButton.innerHTML = "Play Again!";
+  nextButton.innerHTML = "Try Again!";
   nextButton.style.display = "block";
 
   // Append the message element to the DOM
