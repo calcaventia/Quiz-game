@@ -1,12 +1,18 @@
-*{
-  margin:0;
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   background-attachment: fixed;
+  font-family: "Quicksand", sans-serif;
+}
+
+#timer {
+  padding: 0 0 3% 0;
+  font-weight: 700;
 }
 
 .questions {
@@ -14,7 +20,7 @@ body{
   width: 90%;
   max-width: 600px;
   margin: 100px auto 0;
-  padding: 30px;
+  padding: 30px 30px 90px 30px;
   box-shadow: 0px 0px 20px #380f42;
   border-radius: 30px;
   border: 4px solid #100547;
@@ -26,6 +32,7 @@ body{
 
 .btn {
   background-color: #667eea;
+  font-weight: 700;
   color: #f4f0f0;
   width: 100%;
   border-radius: 3px;
@@ -35,7 +42,8 @@ body{
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s;
-
+  border: none;
+  box-shadow: 3px 3px 6px #380f42;
 }
 
 .button-container {
@@ -43,7 +51,7 @@ body{
   gap: 10px;
 }
 
-#finished-btn{
+#finished-btn {
   background-color: #764ba2;
   color: #fff;
   border: none;
@@ -51,34 +59,40 @@ body{
   cursor: pointer;
 }
 
-
-.btn:hover:not([disabled]){
+.btn:hover:not([disabled]) {
   background: #222;
   color: #fff;
+  box-shadow: 3px 3px 6px #a1196c;
 }
 
 .btn:disabled {
   cursor: no-drop;
 }
 
+#answer-buttons {
+  padding: 0 0 30px 0;
+}
 
 #next-btn {
-  background-color:#a1196c ;
+  background-color: #a1196c;
   color: #fff;
-  width: 150px;
-  border: 0;
-  padding: 10px;
-  margin: 20px auto 0;
-  border-radius: 3px;
+  border: none;
+  float: right;
   cursor: pointer;
   display: none;
+  font-weight: 900;
+  font-family: "Quicksand", sans-serif;
+  border-radius: 30px;
+  padding: 2% 3% 2% 3%;
+  font-size: 16px;
+  box-shadow: 3px 3px 6px #380f42;
 }
 
 .correct {
   background: lime;
 }
 
-.incorrect{
+.incorrect {
   background: red;
 }
 .navbar-transparent {
@@ -117,13 +131,10 @@ h5 {
     padding: 0 20px 30px 20px;
   }
 
-  #melsoft-logo {
+  .melsoft-logo {
     width: 60%;
   }
 }
-#melsoft-logonav {
-  display: block;
-  margin: 0 auto;
+.melsoft-logo {
   width: 80px;
-  padding: 5%;
 }
