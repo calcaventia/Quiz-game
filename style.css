@@ -26,7 +26,7 @@ h2 {
 }
 
 .play-button {
-  position: absolute;
+  position: relative;
   top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -39,6 +39,7 @@ h2 {
   animation: glowing 1.5s infinite;
   border: none;
   color: transparent;
+  margin: 0 auto;
 }
 
 .play-button:before {
@@ -109,6 +110,9 @@ h2 {
   }
 
   .play-button {
-    top: 80%;
+    position: relative;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
