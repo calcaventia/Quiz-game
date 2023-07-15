@@ -8,7 +8,7 @@ body {
   margin: 50px auto;
   padding: 1% 2% 2% 2%;
   max-width: 60%;
-  height: 100%;
+  max-height: 100%;
   background-color: #fcfefe;
   box-shadow: 0px 0px 20px #380f42;
   border-radius: 30px;

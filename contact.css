@@ -7,7 +7,7 @@ body {
   display: block;
   margin: 50px auto;
   max-width: 60%;
-  height: 100%;
+  max-height: 100%;
   box-shadow: 0px 0px 20px #380f42;
   border-radius: 30px;
   font-family: "Quicksand", sans-serif;
