@@ -104,15 +104,11 @@ h2 {
     margin: 60px auto;
   }
 
-  h2 {
-    padding: 5% 0 0 0;
-  }
-
   .play-button:before {
     top: 52%;
   }
 
   .play-button {
-    top: 110%;
+    top: 80%;
   }
 }
