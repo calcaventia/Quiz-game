@@ -5,7 +5,7 @@ body {
 
 .container {
   display: block;
-  margin: 50px auto;
+  margin: 5% auto;
   padding: 1% 2% 2% 2%;
   max-width: 60%;
   max-height: 100%;
@@ -42,7 +42,7 @@ h1 {
 
 h5 {
   text-align: center;
-  padding: 1% 0 3% 0;
+  padding: 1% 0 2% 0;
   font-family: "Quicksand", sans-serif;
   font-size: 120%;
 }
@@ -50,7 +50,7 @@ h5 {
 #instructions-content1,
 #instructions-content2 {
   font-size: 100%;
-  padding: 2% 12% 2% 12%;
+  padding: 2% 10% 1% 10%;
   height: 100%;
   background-color: #667eea;
   color: #fff;
