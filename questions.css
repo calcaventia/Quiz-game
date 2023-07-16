@@ -17,17 +17,16 @@ body {
 
 .questions {
   background: #fff;
-  width: 90%;
-  max-width: 40%;
+  max-width: 700px;
   max-height: 100%;
   margin: 5% auto 0;
-  padding: 2% 2% 5% 2%;
+  padding: 3% 3% 4% 3%;
   box-shadow: 0px 0px 20px #380f42;
   border-radius: 30px;
 }
 
 .quiz {
-  padding: 20px 0;
+  padding: 2% 0;
 }
 
 .btn {
@@ -37,9 +36,9 @@ body {
   width: 100%;
   border-radius: 3px;
   padding: 2%;
-  margin: 2% 0;
+  margin: 10px 0;
   text-align: left;
-  font-size: 100%;
+  font-size: 16px;
   cursor: pointer;
   transition: all 0.3s;
   border: none;
@@ -48,7 +47,7 @@ body {
 
 .button-container {
   display: flex;
-  gap: 2%;
+  gap: 10px;
 }
 
 #finished-btn {
@@ -78,7 +77,7 @@ body {
 }
 
 #answer-buttons {
-  padding: 0 0 3% 0;
+  padding: 0 0 30px 0;
 }
 
 #next-btn {
@@ -92,7 +91,7 @@ body {
   font-family: "Quicksand", sans-serif;
   border-radius: 30px;
   padding: 2% 3% 2% 3%;
-  font-size: 100%;
+  font-size: 16px;
   box-shadow: 3px 3px 6px #380f42;
 }
 
@@ -133,10 +132,11 @@ h5 {
 }
 /* Media query for mobile screens */
 @media (max-width: 767px) {
-  .container {
+  .questions {
     max-width: 90%;
     max-height: 100%;
     padding: 0 20px 30px 20px;
+    padding: 0% 2% 13% 2%;
   }
 
   .melsoft-logo {

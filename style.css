@@ -30,8 +30,8 @@ h2 {
   top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
+  width: 85px;
+  height: 85px;
   background-color: #9a1c9e;
   border-radius: 50%;
   cursor: pointer;
@@ -119,5 +119,9 @@ h2 {
     transform: translate(-50%, -50%);
     width: 70px;
     height: 70px;
+  }
+
+  h2 {
+    font-size: 130%;
   }
 }
