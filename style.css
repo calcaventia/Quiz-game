@@ -5,7 +5,7 @@ body {
 
 .container {
   display: block;
-  margin: 80px auto;
+  margin: 5% auto;
   padding: 1% 2% 2% 2%;
   max-width: 60%;
   max-height: 100%;
@@ -22,7 +22,7 @@ h2 {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: 900;
-  font-size: 25px;
+  font-size: 190%;
 }
 
 .play-button {
