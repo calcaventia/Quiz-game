@@ -22,6 +22,7 @@ ul.navbar-nav {
   margin-left: auto;
   font-family: "Quicksand", sans-serif;
   font-size: 100%;
+  white-space: nowrap;
 }
 
 #startQuiz-nav {
@@ -50,6 +51,7 @@ h5 {
 #instructions-content2 {
   font-size: 100%;
   padding: 2% 12% 2% 12%;
+  height: 100%;
   background-color: #667eea;
   color: #fff;
   border-radius: 10px;
@@ -83,7 +85,7 @@ h5 {
 #melsoft-logonav {
   display: block;
   width: 15%;
-  padding: 3% 3% 0 0;
+  padding: 0 0 0 0;
 }
 
 /* Media query for mobile screens */
@@ -91,7 +93,7 @@ h5 {
   .container {
     max-width: 90%;
     max-height: 100%;
-    padding: 0 20px 30px 20px;
+    padding: 0 2% 3% 2%;
   }
 
   #melsoft-logo {
