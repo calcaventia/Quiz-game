@@ -95,6 +95,7 @@ h2 {
 /* Media query for mobile screens */
 @media (max-width: 767px) {
   .container {
+    margin-top: 70px;
     max-width: 90%;
     max-height: 100%;
     padding: 0 15px; /* Adjust the padding as per your needs */
