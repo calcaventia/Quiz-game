@@ -135,19 +135,25 @@ h2 {
   font-size: 150%;
 }
 /* Media query for mobile screens */
-@media (max-width: 767px) {
-  .questions {
+@media (max-width: 900px) {
+  .container {
+    margin-top: 80px;
     max-width: 90%;
     max-height: 100%;
-    padding: 0% 2% 10% 2%;
+    padding: 0 15px; /* Adjust the padding as per your needs */
   }
-
   .melsoft-logo {
-    width: 60%;
-    padding: 2% 0 0 0;
+    padding: 8% 0 0 0;
   }
   h2 {
-    font-size: 100%;
+    font-size: 18px;
+  }
+  #timer {
+    padding: 10px 0 25px 0;
+    font-size: 20px;
+  }
+  .btn {
+    padding: 5%;
   }
 }
 .melsoft-logo {
